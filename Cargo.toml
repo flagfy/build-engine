@@ -3,8 +3,9 @@ name = "flagfy-build-engine"
 version = "0.1.0"
 edition = "2021"
 authors = ["Rafael Maciel <rafamaciel@protonmail.com>"]
-license = "MIT OR Apache-2.0"
+license = "MIT"
 repository = "https://github.com//flagfy/build-engine"
+description = "Build engine for the Flagfy ecosystem, focused on performance and WebAssembly."
 
 [lib]
 crate-type = ["cdylib", "rlib"]
