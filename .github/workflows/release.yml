@@ -39,10 +39,8 @@ jobs:
       - name: Publish to npm
         run: |
           cd pkg
-          # Instala o jq rapidamente se não houver (o runner ubuntu costuma ter)
-          # Aqui trocamos o nome no package.json para 'build-engine'
           tmp=$(mktemp)
-          jq '.name = "build-engine"' package.json > "$tmp" && mv "$tmp" package.json
+          jq '.name = "@flagfy/build-engine"' package.json > "$tmp" && mv "$tmp" package.json
           
           echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
           npm publish --access public
